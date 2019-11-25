@@ -31,10 +31,4 @@ public class HomePage extends BasePage {
 		return getInstance(ContactsPage.class);
 	}
 
-	public DealsPage clickOnDealsLink(){
-		doClick(dealsLink);
-		return getInstance(DealsPage.class);
-	}
-
-
 }
