@@ -14,31 +14,37 @@ public class BasePage extends Page{
 		super(driver);
 	}
 
+	@Override
 	public void doClick(By locator) {
 		waitForElementPresent(locator);
 		getElement(locator).click();
 	}
 
+	@Override
 	public void doSendKeys(By locator, String text) {
 		waitForElementPresent(locator);
 		getElement(locator).sendKeys(text);
 	}
 
+	@Override
 	public String doGetText(By locator) {
 		waitForElementPresent(locator);
 		return getElement(locator).getText();
 	}
 
+	@Override
 	public boolean isDisplayed(By locator) {
 		waitForElementPresent(locator);
 		return getElement(locator).isDisplayed();
 	}
 
+	@Override
 	public boolean isChecked(By locator) {
 		waitForElementPresent(locator);
 		return getElement(locator).isSelected();
 	}
   
+	@Override
 	public int getTableRowNumber(By rowLocator, String tablePath , String searchKeyword) {
 		waitForElementPresent(rowLocator);
 		List<WebElement> row=getElements(rowLocator);
@@ -52,6 +58,7 @@ public class BasePage extends Page{
 		return 0;
 	}
 
+	@Override
 	public int getTotalRowCount(By rowLocator) {
 		waitForElementPresent(rowLocator);
 		return getElements(rowLocator).size();

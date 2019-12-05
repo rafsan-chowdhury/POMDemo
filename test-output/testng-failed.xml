@@ -10,9 +10,8 @@
       <class name="com.demo.qa.testCases.ContactPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="selectSingleContactsTest"/>
           <include name="tearDown"/>
-          <include name="createNewContactTest" invocation-numbers="0 1 1 1 1"/>
+          <include name="createNewContactTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.demo.qa.testCases.ContactPageTest -->
     </classes>

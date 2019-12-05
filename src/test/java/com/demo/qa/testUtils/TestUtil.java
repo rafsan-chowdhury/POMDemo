@@ -15,16 +15,14 @@ public class TestUtil extends BaseTest {
 	public static long PAGE_LOAD_TIMEOUT=60;
 	public static long IMPLICIT_WAIT=10;
 	public static String projectPath= System.getProperty("user.dir");
+	
 	public static Object[][] getTestData(String sheetName) {
-
-		int rowCount;
-		int colCount;
 		try {
 
 			XSSFWorkbook workbook = new XSSFWorkbook(projectPath+"\\src\\main\\java\\com\\demo\\qa\\testData\\DemoTestData.xlsx");
 			XSSFSheet sheet= workbook.getSheet(sheetName);
-			rowCount= sheet.getPhysicalNumberOfRows();
-			colCount= sheet.getRow(0).getPhysicalNumberOfCells();
+			int rowCount= sheet.getPhysicalNumberOfRows();
+			int colCount= sheet.getRow(0).getPhysicalNumberOfCells();
 
 			Object data[][]= new Object[rowCount-1][colCount];
 

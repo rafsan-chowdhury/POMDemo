@@ -18,6 +18,20 @@ public abstract class Page {
 		wait= new WebDriverWait(this.driver, 20);
 	}
 	
+	public abstract void doClick(By locator);
+	
+	public abstract void doSendKeys(By locator, String text); 
+	
+	public abstract String doGetText(By locator); 
+	
+	public abstract boolean isDisplayed(By locator); 
+	
+	public abstract boolean isChecked(By locator); 
+	
+	public abstract int getTableRowNumber(By rowLocator, String tablePath , String searchKeyword); 
+	
+	public abstract int getTotalRowCount(By rowLocator);
+	
 	public abstract String getPageTitle();
 	
 	public abstract String getPageHeader(By locator);
